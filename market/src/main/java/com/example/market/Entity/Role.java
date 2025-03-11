@@ -15,8 +15,6 @@ public class Role {
     @Column(name = "role_name")
     private String roleName;
 
-    @OneToMany(mappedBy = "role", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Staff> staff;
 
     public Role() {
 
@@ -38,11 +36,5 @@ public class Role {
         this.roleName = roleName;
     }
 
-    public List<Staff> getStaff() {
-        return staff;
-    }
 
-    public void setStaff(List<Staff> staff) {
-        this.staff = staff;
-    }
 }
